@@ -15,6 +15,7 @@ const weatherForecast = document.getElementById('weather-forecast')
 const currentTemp = document.getElementById('current-temp')
 const months = ['January','February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 const days = ['Sunday', 'Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+const api_key = '846d706b0e0f489512bd7734f0af0fab'
 
 const updateTime = () =>{
   const time = new Date()
@@ -25,9 +26,5 @@ const updateTime = () =>{
   timeElement.innerText = currentTime[0].toString();
   amPm.innerText = currentTime[1].toString();
   dateElement.innerText = `${days[day]}, ${date} ${months[month]}`;
-// console.log(date)
 }
 setInterval(updateTime, 5000)
-// updateTime()
-// console.log(updateTime())
-// window.addEventListener('load', () => setInterval(updateTime, 1000))
