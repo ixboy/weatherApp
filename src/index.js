@@ -15,7 +15,6 @@ const weatherForecast = document.getElementById('weather-forecast')
 const currentTemp = document.getElementById('current-temp')
 const months = ['January','February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 const days = ['Sunday', 'Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-const api_key = '846d706b0e0f489512bd7734f0af0fab'
 
 const updateTime = () =>{
   const time = new Date()
