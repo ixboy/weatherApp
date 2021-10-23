@@ -25,9 +25,5 @@ const updateTime = () =>{
   timeElement.innerText = currentTime[0].toString();
   amPm.innerText = currentTime[1].toString();
   dateElement.innerText = `${days[day]}, ${date} ${months[month]}`;
-// console.log(date)
 }
 setInterval(updateTime, 5000)
-// updateTime()
-// console.log(updateTime())
-// window.addEventListener('load', () => setInterval(updateTime, 1000))
