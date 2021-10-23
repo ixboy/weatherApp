@@ -27,3 +27,14 @@ const updateTime = () =>{
   dateElement.innerText = `${days[day]}, ${date} ${months[month]}`;
 }
 setInterval(updateTime, 5000)
+
+
+function getWeatherData(){
+   navigator.geolocation.getCurrentPosition(async(success) => {
+    let {latitude, longitude } = success.coords;
+    let data = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&lang=pt&appid=${api_key}`)
+    data = await data.json() 
+    console.log(data)
+  })
+}
+getWeatherData()
